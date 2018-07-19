@@ -1,0 +1,11 @@
+<shader>
+	<program src="Data/Shaders/Src/Additive" />
+  <blend>
+    <alpha op="add" src="one" dst="one" />
+    <color op="add" src="src_alpha" dst="dst_alpha" />
+  </blend>
+
+  <depth test="less" write="false"/>
+  <queue name="additive" />
+
+</shader>

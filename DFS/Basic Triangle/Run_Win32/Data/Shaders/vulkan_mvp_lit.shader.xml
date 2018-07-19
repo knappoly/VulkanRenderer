@@ -1,0 +1,18 @@
+<shader>
+  <program define="USE_AMBIENT;PHONG;DOT3">
+   
+    <vertex file="Data/Shaders/Src/mvp_lit">
+    	<descriptors>
+    		<descriptor type="ubo" set="0" binding="0" />
+    	</descriptors>
+    </vertex>
+    
+    <fragment file="Data/Shaders/Src/mvp_lit">
+    	<descriptors>
+    		<descriptor type="imgsampler" set="1" binding="0" />
+    	</descriptors>
+    </fragment>
+
+  </program>
+</shader>
+

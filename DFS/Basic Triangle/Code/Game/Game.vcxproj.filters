@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="General">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{37ba8967-0ea5-4700-9a90-87ed45bdead2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Definitions">
+      <UniqueIdentifier>{55120eef-62c1-42e4-8947-008a87ccc147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General\Framework">
+      <UniqueIdentifier>{a2d40af0-7f76-4352-81c1-6b77c6499b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Shaders">
+      <UniqueIdentifier>{79ac99af-9290-4087-90c0-484db825de50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState">
+      <UniqueIdentifier>{967c1d0c-2d0d-45a6-bcb4-f9cff209db30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Shaders\Src">
+      <UniqueIdentifier>{1ceb5b10-ea86-490c-8e59-67365b8932f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Objects">
+      <UniqueIdentifier>{f632693b-5e55-403b-903b-22d18204c8a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>General\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>General\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Win32.cpp">
+      <Filter>General\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCommon.cpp">
+      <Filter>General\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>General\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\GameState.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState\GameState_Playing.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.hpp">
+      <Filter>General\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>General\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCommon.hpp">
+      <Filter>General\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.hpp">
+      <Filter>General\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\GameState_Playing.hpp">
+      <Filter>GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState\GameState.hpp">
+      <Filter>GameState</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Run_Win32\Data\gameconfig.xml">
+      <Filter>Data</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Shaders\mvp_lit.shader.xml">
+      <Filter>Data\Shaders</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Shaders\multilight.shader.xml">
+      <Filter>Data\Shaders</Filter>
+    </Xml>
+    <Xml Include="..\..\Run_Win32\Data\Shaders\additive.shader.xml">
+      <Filter>Data\Shaders</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\block.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\block.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\debug.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\debug.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\default.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\default.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\grayscale.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\grayscale.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\mvp_lit.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\mvp_lit.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\SpriteAlphaCutout.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\SpriteAlphaCutout.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\debug.shader.xml">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\MultiLight.fs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+    <None Include="..\..\Run_Win32\Data\Shaders\Src\MultiLight.vs">
+      <Filter>Data\Shaders\Src</Filter>
+    </None>
+  </ItemGroup>
+</Project>

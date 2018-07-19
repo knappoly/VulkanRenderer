@@ -1,0 +1,9 @@
+<shader>
+	<cull mode="none" />
+	<windorder order="ccw" />
+	<program src="Data/Shaders/Src/debug" />
+  <blend>
+    <alpha op="add" src="one" dst="one" />
+    <color op="add" src="src_alpha" dst="inv_src_alpha" />
+  </blend>
+</shader>

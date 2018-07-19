@@ -1,0 +1,6 @@
+<material id="vulkantest">
+	
+	<shader src="Data/Shaders/vulkantest.shader" />
+	<texture bind="0" src="Data/Models/scifi_fighter_mk6/SciFi_Fighter-MK6-diffuse.jpg" />
+
+</material>

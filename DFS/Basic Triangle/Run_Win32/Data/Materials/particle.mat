@@ -1,0 +1,6 @@
+<material id="shiptrail">
+	
+	<shader src="Data/Shaders/additive.shader" />
+	<texture bind="0" src="Data/Images/Particle.png" />
+
+</material>

@@ -1,0 +1,7 @@
+<shader>
+  <program define="USE_AMBIENT;PHONG;DOT3">
+    <vertex file="Data/Shaders/Src/MultiLight" />
+    <fragment file="Data/Shaders/Src/MultiLight" />
+  </program>
+</shader>
+

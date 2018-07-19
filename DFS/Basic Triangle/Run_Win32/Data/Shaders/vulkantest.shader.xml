@@ -1,0 +1,9 @@
+<shader>
+  <program define="USE_AMBIENT;PHONG;DOT3">
+   
+    <vertex file="Data/Shaders/Src/vulkanTex" />
+    <fragment file="Data/Shaders/Src/vulkanTex" />
+
+  </program>
+</shader>
+

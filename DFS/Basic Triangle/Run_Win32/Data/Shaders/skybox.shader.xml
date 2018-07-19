@@ -1,0 +1,7 @@
+<shader>
+  <program>
+    <vertex file="Data/Shaders/Src/skybox" />
+    <fragment file="Data/Shaders/Src/skybox" />
+  </program>
+</shader>
+

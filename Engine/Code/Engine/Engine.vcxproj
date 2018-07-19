@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugInLine|Win32">
+      <Configuration>DebugInLine</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugInLine|x64">
+      <Configuration>DebugInLine</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="FastBreak|Win32">
+      <Configuration>FastBreak</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="FastBreak|x64">
+      <Configuration>FastBreak</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{48221CA8-797F-4B6F-A64C-296C9D2EAA11}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugInLine|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='FastBreak|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))"; %(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ThirdParty\FMOD\fmod.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod.hpp" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_codec.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_common.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_dsp.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_dsp_effects.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_errors.h" />
+    <ClInclude Include="..\ThirdParty\FMOD\fmod_output.h" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_cfg.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_common.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_cpp.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_cross.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_cross_util.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_glsl.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_hlsl.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_msl.hpp" />
+    <ClInclude Include="..\ThirdParty\spirvcross\spirv_reflect.hpp" />
+    <ClInclude Include="..\ThirdParty\stb\stb_image.h" />
+    <ClInclude Include="..\ThirdParty\stb\stb_image_write.h" />
+    <ClInclude Include="..\ThirdParty\TinyXML2\tinyxml2.h" />
+    <ClInclude Include="Audio\AudioGroup.hpp" />
+    <ClInclude Include="Audio\AudioSystem.hpp" />
+    <ClInclude Include="Console\Command.hpp" />
+    <ClInclude Include="Console\CommandDefinition.hpp" />
+    <ClInclude Include="Console\DevConsole.hpp" />
+    <ClInclude Include="Core\EngineConfig.hpp" />
+    <ClInclude Include="Core\ShaderCompiler.hpp" />
+    <ClInclude Include="Core\StopWatch.hpp" />
+    <ClInclude Include="Enumerations\BlendFactor.hpp" />
+    <ClInclude Include="Enumerations\BlendOp.hpp" />
+    <ClInclude Include="Enumerations\CullMode.hpp" />
+    <ClInclude Include="Enumerations\DepthTestOp.hpp" />
+    <ClInclude Include="Enumerations\FillMode.hpp" />
+    <ClInclude Include="Enumerations\RenderQueue.hpp" />
+    <ClInclude Include="Enumerations\ReservedDescriptorSetSlot.hpp" />
+    <ClInclude Include="Enumerations\DrawPrimitiveType.hpp" />
+    <ClInclude Include="Enumerations\ReservedUniformBlock.hpp" />
+    <ClInclude Include="Enumerations\ShaderStageSlot.hpp" />
+    <ClInclude Include="Enumerations\TextureFormat.hpp" />
+    <ClInclude Include="Enumerations\TextureSlot.hpp" />
+    <ClInclude Include="Enumerations\WindOrder.hpp" />
+    <ClInclude Include="Enumerations\WrapMode.hpp" />
+    <ClInclude Include="Math\AABB3.hpp" />
+    <ClInclude Include="Math\Disc3.hpp" />
+    <ClInclude Include="Math\OBB3.hpp" />
+    <ClInclude Include="Math\Plane.hpp" />
+    <ClInclude Include="Math\Ray3.hpp" />
+    <ClInclude Include="Math\RaycastHit3D.hpp" />
+    <ClInclude Include="Math\Segment3.hpp" />
+    <ClInclude Include="Renderer\Buffers\UniformBuffer.hpp" />
+    <ClInclude Include="Renderer\DrawCall.hpp" />
+    <ClInclude Include="Renderer\FogBlock.hpp" />
+    <ClInclude Include="Renderer\ForwardRenderPath.hpp" />
+    <ClInclude Include="Renderer\GIFAnimation.hpp" />
+    <ClInclude Include="Renderer\Lights\Light.hpp" />
+    <ClInclude Include="Renderer\Material.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty_Float.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty_Int.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty_Matrix44.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty_Rgba.hpp" />
+    <ClInclude Include="Renderer\MaterialProperties\MaterialProperty_Vector3.hpp" />
+    <ClInclude Include="Renderer\ParticleEmitter.hpp" />
+    <ClInclude Include="Renderer\Renderable.hpp" />
+    <ClInclude Include="Renderer\RenderScene.hpp" />
+    <ClInclude Include="Renderer\SamplerDesc.hpp" />
+    <ClInclude Include="Renderer\Shader.hpp" />
+    <ClInclude Include="Core\Blackboard.hpp" />
+    <ClInclude Include="Core\Clock.hpp" />
+    <ClInclude Include="Core\EngineCommon.hpp" />
+    <ClInclude Include="Core\ErrorWarningAssert.hpp" />
+    <ClInclude Include="Core\HeatMap.hpp" />
+    <ClInclude Include="Core\Image.hpp" />
+    <ClInclude Include="Core\Rgba.hpp" />
+    <ClInclude Include="Core\StringTokenizer.hpp" />
+    <ClInclude Include="Core\StringUtils.hpp" />
+    <ClInclude Include="Core\Time.hpp" />
+    <ClInclude Include="Core\Vertex.hpp" />
+    <ClInclude Include="Core\Window.hpp" />
+    <ClInclude Include="Core\XMLUtils.hpp" />
+    <ClInclude Include="File\File.hpp" />
+    <ClInclude Include="Input\InputSystem.hpp" />
+    <ClInclude Include="Input\KeyButtonState.hpp" />
+    <ClInclude Include="Input\Mouse.hpp" />
+    <ClInclude Include="Input\XboxController.hpp" />
+    <ClInclude Include="Input\XboxStickState.hpp" />
+    <ClInclude Include="Input\XboxTriggerState.hpp" />
+    <ClInclude Include="Math\AABB2.hpp" />
+    <ClInclude Include="Math\CubicSpline2D.hpp" />
+    <ClInclude Include="Math\Disc2.hpp" />
+    <ClInclude Include="Math\FloatRange.hpp" />
+    <ClInclude Include="Math\IntRange.hpp" />
+    <ClInclude Include="Math\IntVector2.hpp" />
+    <ClInclude Include="Math\IntVector3.hpp" />
+    <ClInclude Include="Math\MathUtils.hpp" />
+    <ClInclude Include="Math\Matrix44.hpp" />
+    <ClInclude Include="Math\Trajectory.hpp" />
+    <ClInclude Include="Math\Transform.hpp" />
+    <ClInclude Include="Math\Vector2.hpp" />
+    <ClInclude Include="Math\Vector3.hpp" />
+    <ClInclude Include="Math\Vector4.hpp" />
+    <ClInclude Include="Renderer\BitmapFont.hpp" />
+    <ClInclude Include="Renderer\Buffers\IndexBuffer.hpp" />
+    <ClInclude Include="Renderer\Buffers\VertexBuffer.hpp" />
+    <ClInclude Include="Renderer\Camera.hpp" />
+    <ClInclude Include="Renderer\DebugRenderer.hpp" />
+    <ClInclude Include="Renderer\DebugRenderUtils.hpp" />
+    <ClInclude Include="Renderer\External\GL\glcorearb.h" />
+    <ClInclude Include="Renderer\External\GL\glext.h" />
+    <ClInclude Include="Renderer\External\GL\wglext.h" />
+    <ClInclude Include="Renderer\FrameBuffer.hpp" />
+    <ClInclude Include="Renderer\GLFunctions.hpp" />
+    <ClInclude Include="Renderer\IsoSprite.hpp" />
+    <ClInclude Include="Renderer\IsoSpriteAnim.hpp" />
+    <ClInclude Include="Renderer\IsoSpriteAnimDefinition.hpp" />
+    <ClInclude Include="Renderer\IsoSpriteAnimSet.hpp" />
+    <ClInclude Include="Renderer\IsoSpriteAnimSetDefinition.hpp" />
+    <ClInclude Include="Renderer\IsoSpriteDefinition.hpp" />
+    <ClInclude Include="Renderer\Mesh\Mesh.hpp" />
+    <ClInclude Include="Renderer\Mesh\MeshBuilder.hpp" />
+    <ClInclude Include="Renderer\Mesh\MeshUtils.hpp" />
+    <ClInclude Include="Renderer\OrbitCamera.hpp" />
+    <ClInclude Include="Renderer\RenderBuffer.hpp" />
+    <ClInclude Include="Renderer\Renderer.hpp" />
+    <ClInclude Include="Renderer\Sampler.hpp" />
+    <ClInclude Include="Renderer\ShaderProgram.hpp" />
+    <ClInclude Include="Renderer\Sprite.hpp" />
+    <ClInclude Include="Renderer\SpriteAnim.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimation.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimDefinition.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimNew\SpriteAnimNew.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimNew\SpriteAnimNewDefinition.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimSet.hpp" />
+    <ClInclude Include="Renderer\SpriteAnimSetDefinition.hpp" />
+    <ClInclude Include="Renderer\SpriteDefinition.hpp" />
+    <ClInclude Include="Renderer\SpriteSheet.hpp" />
+    <ClInclude Include="Renderer\Texture.hpp" />
+    <ClInclude Include="Renderer\TextureCube.hpp" />
+    <ClInclude Include="Renderer\UICamera.hpp" />
+    <ClInclude Include="Structures\DrawInstruction.hpp" />
+    <ClInclude Include="Structures\LightStructure.hpp" />
+    <ClInclude Include="Structures\RenderState.hpp" />
+    <ClInclude Include="Structures\TextAlignment.hpp" />
+    <ClInclude Include="Structures\UniformStructures.hpp" />
+    <ClInclude Include="VulkanRenderer\Buffers\VKIndexBuffer.hpp" />
+    <ClInclude Include="VulkanRenderer\Buffers\VKRenderBuffer.hpp" />
+    <ClInclude Include="VulkanRenderer\Buffers\VKUniformBuffer.hpp" />
+    <ClInclude Include="VulkanRenderer\Buffers\VKVertexBuffer.hpp" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\GLSL.std.450.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\spirv.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\spirv.hpp" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vk_icd.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vk_layer.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vk_layer_dispatch_table.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vk_platform.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vk_sdk_platform.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan.hpp" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_android.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_core.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_ios.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_macos.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_mir.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_vi.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_wayland.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_win32.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_xcb.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_xlib.h" />
+    <ClInclude Include="VulkanRenderer\External\Vulkan\vulkan_xlib_xrandr.h" />
+    <ClInclude Include="VulkanRenderer\Mesh\VKMeshUtils.hpp" />
+    <ClInclude Include="VulkanRenderer\Mesh\VKMesh.hpp" />
+    <ClInclude Include="VulkanRenderer\VKCamera.hpp" />
+    <ClInclude Include="VulkanRenderer\VKFramebuffer.hpp" />
+    <ClInclude Include="VulkanRenderer\VKFunctions.hpp" />
+    <ClInclude Include="VulkanRenderer\VKMaterial.hpp" />
+    <ClInclude Include="VulkanRenderer\VKPipeline.hpp" />
+    <ClInclude Include="VulkanRenderer\VKRenderer.hpp" />
+    <ClInclude Include="VulkanRenderer\VKShader.hpp" />
+    <ClInclude Include="VulkanRenderer\VKShaderProgram.hpp" />
+    <ClInclude Include="VulkanRenderer\VKShaderStage.hpp" />
+    <ClInclude Include="VulkanRenderer\VKTexSampler.hpp" />
+    <ClInclude Include="VulkanRenderer\VKTexture.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_cfg.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_cpp.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_cross.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_cross_util.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_glsl.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_hlsl.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_msl.cpp" />
+    <ClCompile Include="..\ThirdParty\spirvcross\spirv_reflect.cpp" />
+    <ClCompile Include="..\ThirdParty\stb\stb_image.c" />
+    <ClCompile Include="..\ThirdParty\TinyXML2\tinyxml2.cpp" />
+    <ClCompile Include="Audio\AudioGroup.cpp" />
+    <ClCompile Include="Audio\AudioSystem.cpp" />
+    <ClCompile Include="Console\Command.cpp" />
+    <ClCompile Include="Console\CommandDefinition.cpp" />
+    <ClCompile Include="Console\DevConsole.cpp" />
+    <ClCompile Include="Core\Blackboard.cpp" />
+    <ClCompile Include="Core\Clock.cpp" />
+    <ClCompile Include="Core\EngineCommon.cpp" />
+    <ClCompile Include="Core\ErrorWarningAssert.cpp" />
+    <ClCompile Include="Core\HeatMap.cpp" />
+    <ClCompile Include="Core\Image.cpp" />
+    <ClCompile Include="Core\Rgba.cpp" />
+    <ClCompile Include="Core\ShaderCompiler.cpp" />
+    <ClCompile Include="Core\StopWatch.cpp" />
+    <ClCompile Include="Core\StringTokenizer.cpp" />
+    <ClCompile Include="Core\StringUtils.cpp" />
+    <ClCompile Include="Core\Time.cpp" />
+    <ClCompile Include="Core\Vertex.cpp" />
+    <ClCompile Include="Core\Window.cpp" />
+    <ClCompile Include="Core\XMLUtils.cpp" />
+    <ClCompile Include="File\File.cpp" />
+    <ClCompile Include="Input\InputSystem.cpp" />
+    <ClCompile Include="Input\KeyButtonState.cpp" />
+    <ClCompile Include="Input\Mouse.cpp" />
+    <ClCompile Include="Input\XboxController.cpp" />
+    <ClCompile Include="Input\XboxStickState.cpp" />
+    <ClCompile Include="Input\XboxTriggerState.cpp" />
+    <ClCompile Include="Math\AABB2.cpp" />
+    <ClCompile Include="Math\AABB3.cpp" />
+    <ClCompile Include="Math\CubicSpline2D.cpp" />
+    <ClCompile Include="Math\Disc2.cpp" />
+    <ClCompile Include="Math\Disc3.cpp" />
+    <ClCompile Include="Math\FloatRange.cpp" />
+    <ClCompile Include="Math\IntRange.cpp" />
+    <ClCompile Include="Math\IntVector2.cpp" />
+    <ClCompile Include="Math\IntVector3.cpp" />
+    <ClCompile Include="Math\MathUtils.cpp" />
+    <ClCompile Include="Math\Matrix44.cpp" />
+    <ClCompile Include="Math\OBB3.cpp" />
+    <ClCompile Include="Math\Plane.cpp" />
+    <ClCompile Include="Math\Ray3.cpp" />
+    <ClCompile Include="Math\Segment3.cpp" />
+    <ClCompile Include="Math\Trajectory.cpp" />
+    <ClCompile Include="Math\Transform.cpp" />
+    <ClCompile Include="Math\Vector2.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Math\Vector4.cpp" />
+    <ClCompile Include="Renderer\BitmapFont.cpp" />
+    <ClCompile Include="Renderer\Buffers\IndexBuffer.cpp" />
+    <ClCompile Include="Renderer\Buffers\UniformBuffer.cpp" />
+    <ClCompile Include="Renderer\Buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Renderer\Camera.cpp" />
+    <ClCompile Include="Renderer\DebugRenderer.cpp" />
+    <ClCompile Include="Renderer\DebugRenderUtils.cpp" />
+    <ClCompile Include="Renderer\DrawCall.cpp" />
+    <ClCompile Include="Renderer\ForwardRenderPath.cpp" />
+    <ClCompile Include="Renderer\FrameBuffer.cpp" />
+    <ClCompile Include="Renderer\GIFAnimation.cpp" />
+    <ClCompile Include="Renderer\GLFunctions.cpp" />
+    <ClCompile Include="Renderer\IsoSprite.cpp" />
+    <ClCompile Include="Renderer\IsoSpriteAnim.cpp" />
+    <ClCompile Include="Renderer\IsoSpriteAnimDefinition.cpp" />
+    <ClCompile Include="Renderer\IsoSpriteAnimSet.cpp" />
+    <ClCompile Include="Renderer\IsoSpriteAnimSetDefinition.cpp" />
+    <ClCompile Include="Renderer\IsoSpriteDefinition.cpp" />
+    <ClCompile Include="Renderer\Lights\Light.cpp" />
+    <ClCompile Include="Renderer\Material.cpp" />
+    <ClCompile Include="Renderer\MaterialProperties\MaterialProperty_Float.cpp" />
+    <ClCompile Include="Renderer\MaterialProperties\MaterialProperty_Int.cpp" />
+    <ClCompile Include="Renderer\MaterialProperties\MaterialProperty_Matrix44.cpp" />
+    <ClCompile Include="Renderer\MaterialProperties\MaterialProperty_Rgba.cpp" />
+    <ClCompile Include="Renderer\MaterialProperties\MaterialProperty_Vector3.cpp" />
+    <ClCompile Include="Renderer\Mesh\Mesh.cpp" />
+    <ClCompile Include="Renderer\Mesh\MeshBuilder.cpp" />
+    <ClCompile Include="Renderer\Mesh\MeshUtils.cpp" />
+    <ClCompile Include="Renderer\OrbitCamera.cpp" />
+    <ClCompile Include="Renderer\ParticleEmitter.cpp" />
+    <ClCompile Include="Renderer\Renderable.cpp" />
+    <ClCompile Include="Renderer\RenderBuffer.cpp" />
+    <ClCompile Include="Renderer\Renderer.cpp" />
+    <ClCompile Include="Renderer\RenderScene.cpp" />
+    <ClCompile Include="Renderer\Sampler.cpp" />
+    <ClCompile Include="Renderer\Shader.cpp" />
+    <ClCompile Include="Renderer\ShaderProgram.cpp" />
+    <ClCompile Include="Renderer\Sprite.cpp" />
+    <ClCompile Include="Renderer\SpriteAnim.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimation.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimDefinition.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimNew\SpriteAnimNew.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimNew\SpriteAnimNewDefinition.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimSet.cpp" />
+    <ClCompile Include="Renderer\SpriteAnimSetDefinition.cpp" />
+    <ClCompile Include="Renderer\SpriteDefinition.cpp" />
+    <ClCompile Include="Renderer\SpriteSheet.cpp" />
+    <ClCompile Include="Renderer\Texture.cpp" />
+    <ClCompile Include="Renderer\TextureCube.cpp" />
+    <ClCompile Include="Renderer\UICamera.cpp" />
+    <ClCompile Include="Structures\TextAlignment.cpp" />
+    <ClCompile Include="VulkanRenderer\Buffers\VKIndexBuffer.cpp" />
+    <ClCompile Include="VulkanRenderer\Buffers\VKRenderBuffer.cpp" />
+    <ClCompile Include="VulkanRenderer\Buffers\VKUniformBuffer.cpp" />
+    <ClCompile Include="VulkanRenderer\Buffers\VKVertexBuffer.cpp" />
+    <ClCompile Include="VulkanRenderer\Mesh\VKMeshUtils.cpp" />
+    <ClCompile Include="VulkanRenderer\Mesh\VKMesh.cpp" />
+    <ClCompile Include="VulkanRenderer\VKCamera.cpp" />
+    <ClCompile Include="VulkanRenderer\VKFramebuffer.cpp" />
+    <ClCompile Include="VulkanRenderer\VKFunctions.cpp" />
+    <ClCompile Include="VulkanRenderer\VKMaterial.cpp" />
+    <ClCompile Include="VulkanRenderer\VKPipeline.cpp" />
+    <ClCompile Include="VulkanRenderer\VKRenderer.cpp" />
+    <ClCompile Include="VulkanRenderer\VKShader.cpp" />
+    <ClCompile Include="VulkanRenderer\VKShaderProgram.cpp" />
+    <ClCompile Include="VulkanRenderer\VKShaderStage.cpp" />
+    <ClCompile Include="VulkanRenderer\VKTexSampler.cpp" />
+    <ClCompile Include="VulkanRenderer\VKTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\ThirdParty\FMOD\fmod64_vc.lib" />
+    <Library Include="..\ThirdParty\FMOD\fmod_vc.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VulkanRenderer\External\Vulkan\spirv.hpp11" />
+    <None Include="VulkanRenderer\External\Vulkan\spirv.json" />
+    <None Include="VulkanRenderer\External\Vulkan\spirv.lua" />
+    <None Include="VulkanRenderer\External\Vulkan\spirv.py" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

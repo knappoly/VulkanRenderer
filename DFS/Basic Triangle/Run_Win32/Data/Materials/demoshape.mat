@@ -1,0 +1,8 @@
+<material id="demoshape">
+	
+	<shader src="Data/Shaders/multilight.shader" />
+	<texture bind="0" src="Data/Images/cobble/stone_diffuse.png" />
+	<texture bind="1" src="Data/Images/cobble/stone_normal.png" />
+	<float name="SPEC_FACTOR" value="0.0" />
+
+</material>

@@ -1,0 +1,7 @@
+<material id="bullet">
+	
+	<shader src="Data/Shaders/multilight.shader" />
+	<texture bind="0" src="default" />
+	<texture bind="1" src="default" />
+
+</material>

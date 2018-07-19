@@ -1,0 +1,5 @@
+<material id="skybox">
+	
+	<shader src="Data/Shaders/skybox.shader" />
+
+</material>
