@@ -5,6 +5,9 @@
 *.obj
 !**/Run_Win32/data/**/*.obj
 
+#Virtual Environments
+**/venv/**/*.*
+
 # Precompiled Headers
 *.gch
 *.pch

@@ -95,7 +95,7 @@ public:
 	//-----------------------------------------------------------------------------------------------
 	// Accessors/Mutators
 			VkDevice			GetLogicalDevice() const { return m_logicalDevice; }
-			VkPhysicalDevice	GetPhysicalDevice() const { return m_physicalDevice; }
+			VkPhysicalDevice		GetPhysicalDevice() const { return m_physicalDevice; }
 			VKTexture*			GetDefaultColorTarget() const { return m_defaultColorTarget; }
 			VKTexture*			GetDefaultDepthTarget() const { return m_defaultDepthTarget; }
 	
@@ -107,14 +107,14 @@ private:
 			void				SetupDebugCallback();
 			void				InitializeVulkanInstance( const char* appName );
 			bool				CheckDeviceExtensionsSupport( VkPhysicalDevice device );
-			QueueFamilyIndices	GetQueueFamilyIndices( VkPhysicalDevice device );
-			SwapChainDetails	GetSwapChainDetails( VkPhysicalDevice device );
+			QueueFamilyIndices		GetQueueFamilyIndices( VkPhysicalDevice device );
+			SwapChainDetails		GetSwapChainDetails( VkPhysicalDevice device );
 			bool				IsDeviceSuitable( VkPhysicalDevice device );
 			void				CreateSurface();
 			void				PickPhysicalDevice();
 			void				CreateLogicalDevice();
-			VkSurfaceFormatKHR	PickSurfaceFormat( const std::vector<VkSurfaceFormatKHR>& formats );
-			VkPresentModeKHR	PickPresentMode( const std::vector<VkPresentModeKHR>& presentModes );
+			VkSurfaceFormatKHR		PickSurfaceFormat( const std::vector<VkSurfaceFormatKHR>& formats );
+			VkPresentModeKHR		PickPresentMode( const std::vector<VkPresentModeKHR>& presentModes );
 			VkExtent2D			PickSwapExtent( const VkSurfaceCapabilitiesKHR& capabilities );
 			void				CreateSwapChain();
 			void				CreateImageViews();
@@ -143,7 +143,7 @@ public:
 			void				InitializeDefaultMeshes();
 	//-----------------------------------------------------------------------------------------------
 	// Command Buffer ops
-			VkCommandBuffer		BeginTemporaryCommandBuffer(); // Begins a command buffer for temp usage and returns the handle
+			VkCommandBuffer			BeginTemporaryCommandBuffer(); // Begins a command buffer for temp usage and returns the handle
 			void				EndTemporaryCommandBuffer( VkCommandBuffer tempBuffer ); 
 
 	//-----------------------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ public:
 	//-----------------------------------------------------------------------------------------------
 	// Shader functions
 			void				SetShader( VKShader* shader = nullptr );
-			VKShaderProgram*	CreateOrGetShaderProgram(const std::string& path, const char* defines = nullptr);
+			VKShaderProgram*		CreateOrGetShaderProgram(const std::string& path, const char* defines = nullptr);
 			void				UseShaderProgram(const VKShaderProgram* shaderProgram);
 			void				SetDefaultShader();
 			void				BindMeshToProgram( const VKMesh* mesh );
@@ -209,14 +209,16 @@ public:
 	//-----------------------------------------------------------------------------------------------
 	// Buffer operations
 			uint32_t			FindMemoryType( uint32_t requiredTypes, uint32_t requiredProps ) const;
-			void				CreateAndGetBuffer( VkBuffer* out_buffer, VkDeviceMemory* out_deviceMem, VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags props );
+			void				CreateAndGetBuffer( VkBuffer* out_buffer, VkDeviceMemory* out_deviceMem, 
+									   VkDeviceSize size, VkBufferUsageFlags usage, 
+									   VkMemoryPropertyFlags props );
 			void				CopyBuffers( VkBuffer dstBuffer, VkBuffer srcBuffer, VkDeviceSize byteCount );
 	
 	//-----------------------------------------------------------------------------------------------
 	// Static methods
-	static	VKRenderer*			CreateInstance( const char* appName );
-	static	void				DestroyInstance();
-	static	VKRenderer*			GetInstance();
+	static		VKRenderer*			CreateInstance( const char* appName );
+	static		void				DestroyInstance();
+	static		VKRenderer*			GetInstance();
 
 	// Debug callback
 	static	VKAPI_ATTR VkBool32 VKAPI_CALL DebugCallback(VkDebugReportFlagsEXT flags,
@@ -231,72 +233,71 @@ public:
 	//-----------------------------------------------------------------------------------------------
 	// Vulkan Members
 private:
-	uint32_t						m_currentFrame = 0;
-	VkDebugReportCallbackEXT		m_debugCallback;
-	VkInstance						m_vkInstance;
-	VkPhysicalDevice				m_physicalDevice = VK_NULL_HANDLE;
-	VkDevice						m_logicalDevice = VK_NULL_HANDLE;
-	VkQueue							m_graphicsQueue;
-	VkSurfaceKHR					m_surface;
-	VkQueue							m_presentQueue;
-	VkSwapchainKHR					m_swapChain;
-	VkExtent2D						m_swapChainExtent;
-	VkFormat						m_swapChainImageFormat;
-	std::vector<VkImage>			m_swapChainImages;
-	std::vector<VkImageView>		m_swapChainImageViews;
-	VkRenderPass					m_renderPass;
-	VkPipelineLayout				m_pipelineLayout;
-	VkPipeline						m_graphicsPipeline;
-	std::vector<VkFramebuffer>		m_framebuffers;
-	VkCommandPool					m_commandPool;
-	std::vector<VkCommandBuffer>	m_commandBuffers;
-	std::vector<VkSemaphore>		m_imageAvailableSemaphore;
-	std::vector<VkSemaphore>		m_renderFinishedSemaphore;
-	std::vector<VkSemaphore>		m_colorTargetAvailableSemaphore;
-	std::vector<VkFence>			m_fences;
+			uint32_t					m_currentFrame = 0;
+			VkDebugReportCallbackEXT			m_debugCallback;
+			VkInstance					m_vkInstance;
+			VkPhysicalDevice				m_physicalDevice = VK_NULL_HANDLE;
+			VkDevice					m_logicalDevice = VK_NULL_HANDLE;
+			VkQueue						m_graphicsQueue;
+			VkSurfaceKHR					m_surface;
+			VkQueue						m_presentQueue;
+			VkSwapchainKHR					m_swapChain;
+			VkExtent2D					m_swapChainExtent;
+			VkFormat					m_swapChainImageFormat;
+			std::vector<VkImage>				m_swapChainImages;
+			std::vector<VkImageView>			m_swapChainImageViews;
+			VkRenderPass					m_renderPass;
+			VkPipelineLayout				m_pipelineLayout;
+			VkPipeline					m_graphicsPipeline;
+			std::vector<VkFramebuffer>			m_framebuffers;
+			VkCommandPool					m_commandPool;
+			std::vector<VkCommandBuffer>			m_commandBuffers;
+			std::vector<VkSemaphore>			m_imageAvailableSemaphore;
+			std::vector<VkSemaphore>			m_renderFinishedSemaphore;
+			std::vector<VkSemaphore>			m_colorTargetAvailableSemaphore;
+			std::vector<VkFence>				m_fences;
 	
 	//-----------------------------------------------------------------------------------------------
 	// Data Members
-	std::map<std::string,VKTexture*>			m_loadedTextures; 
-	std::map<std::string,VKShaderProgram*>		m_loadedShaderPrograms;
-	std::map<std::string,VKMesh*>				m_loadedMeshes;
-	std::map<std::string,VKMaterial*>			m_loadedMaterials;
-	VKVertexBuffer*								m_immediateVBO;
-	VKIndexBuffer*								m_immediateIBO;
-	VKTexture*									m_immediateTexture = nullptr;
-	VKTexture*									m_defaultTexture = nullptr;
-	VkDescriptorSetLayout						m_descriptorSetLayout;
-	VkDescriptorPool							m_descriptorPool;
-	VKCamera*									m_defaultCamera = nullptr;
-	VKCamera*									m_defaultPerspectiveCamera = nullptr;
-	VKCamera*									m_currentCamera = nullptr;
-	VKTexture*									m_defaultColorTarget = nullptr;
-	VKTexture*									m_defaultDepthTarget = nullptr;
-	VKShader*									m_defaultShader = nullptr;
-	VKMaterial*									m_defaultMaterial = nullptr;
-	VKMaterial*									m_defaultMaterialShared = nullptr;
-	VKMaterial*									m_activeMaterial = nullptr;
-	VKPipeline*									m_defaultPipeline = nullptr;
-	VKUniformBuffer*							m_testBuffer = nullptr;
-	VKUniformBuffer*							m_modelBuffer = nullptr;
-	uint32_t									m_swapImageIndex = 0;
-
-	VkBuffer									m_ubo;
-	VkDeviceMemory								m_uboMemory;
-	VkDescriptorSet								m_descriptorSet;
+			std::map<std::string,VKTexture*>		m_loadedTextures; 
+			std::map<std::string,VKShaderProgram*>		m_loadedShaderPrograms;
+			std::map<std::string,VKMesh*>			m_loadedMeshes;
+			std::map<std::string,VKMaterial*>		m_loadedMaterials;
+			VKVertexBuffer*					m_immediateVBO;
+			VKIndexBuffer*					m_immediateIBO;
+			VKTexture*					m_immediateTexture = nullptr;
+			VKTexture*					m_defaultTexture = nullptr;
+			VkDescriptorSetLayout				m_descriptorSetLayout;
+			VkDescriptorPool				m_descriptorPool;
+			VKCamera*					m_defaultCamera = nullptr;
+			VKCamera*					m_defaultPerspectiveCamera = nullptr;
+			VKCamera*					m_currentCamera = nullptr;
+			VKTexture*					m_defaultColorTarget = nullptr;
+			VKTexture*					m_defaultDepthTarget = nullptr;
+			VKShader*					m_defaultShader = nullptr;
+			VKMaterial*					m_defaultMaterial = nullptr;
+			VKMaterial*					m_defaultMaterialShared = nullptr;
+			VKMaterial*					m_activeMaterial = nullptr;
+			VKPipeline*					m_defaultPipeline = nullptr;
+			VKUniformBuffer*				m_testBuffer = nullptr;
+			VKUniformBuffer*				m_modelBuffer = nullptr;
+			uint32_t					m_swapImageIndex = 0;
+			VkBuffer					m_ubo;
+			VkDeviceMemory					m_uboMemory;
+			VkDescriptorSet					m_descriptorSet;
 };
 
 //-----------------------------------------------------------------------------------------------
 // Standalone functions
-void					VkRenderStartup();
-void					VkShutdown();
-VkFormat				GetVKDataType( VKRenderType type );
-VkFormat				GetVkFormat( eTextureFormat format );
-VkShaderStageFlagBits	GetVKShaderStageFlag( ShaderStageSlot stage );
+void				VkRenderStartup();
+void				VkShutdown();
+VkFormat			GetVKDataType( VKRenderType type );
+VkFormat			GetVkFormat( eTextureFormat format );
+VkShaderStageFlagBits		GetVKShaderStageFlag( ShaderStageSlot stage );
 VkPrimitiveTopology		GetVKDrawType( DrawPrimitiveType type );
 VkPolygonMode			GetVKPolygonMode( FillMode mode );
 VkCullModeFlags			GetVKCullMode( CullMode mode );
-VkFrontFace				GetVKWindOrder( WindOrder order );
-VkCompareOp				GetVKDepthOp( DepthTestOp compare );
-VkBlendOp				GetVKBlendOp( BlendOp op );
+VkFrontFace			GetVKWindOrder( WindOrder order );
+VkCompareOp			GetVKDepthOp( DepthTestOp compare );
+VkBlendOp			GetVKBlendOp( BlendOp op );
 VkBlendFactor			GetVKBlendFactor( BlendFactor factor );
